@@ -17,15 +17,24 @@ import (
 
 // Struct for representing each entry
 type Criterion struct {
-	ID                    string   `yaml:"id"`
-	MaturityLevel         int      `yaml:"maturity_level"`
-	Category              string   `yaml:"category"`
-	CriterionText         string   `yaml:"criterion"`
-	Rationale             string   `yaml:"rationale"`
-	Details               string   `yaml:"details"`
-	ControlMappings       string   `yaml:"control_mappings"`
-	SecurityInsightsValue string   `yaml:"security_insights_value"`
-	ScorecardProbe        []string `yaml:"scorecard_probe"`
+	ID                    string       `yaml:"id"`
+	MaturityLevel         int          `yaml:"maturity_level"`
+	Category              string       `yaml:"category"`
+	CriterionText         string       `yaml:"criterion"`
+	Rationale             string       `yaml:"rationale"`
+	Details               string       `yaml:"details"`
+	ControlMappings       string       `yaml:"control_mappings"`
+	SecurityInsightsValue string       `yaml:"security_insights_value"`
+	ScorecardProbe        []string     `yaml:"scorecard_probe"`
+	MinderRules           []MinderRule `yaml:"minder_rules"`
+}
+
+// MinderRules represents links to Minder rule type definitions along
+// with a configuration snippet.
+type MinderRule struct {
+	Name   string `yaml:"name"`
+	URL    string `yaml:"url"`
+	Config string `yaml:"config,omitempty"`
 }
 
 // Struct for holding the entire YAML structure

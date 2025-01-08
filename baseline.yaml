@@ -128,6 +128,9 @@ criteria:
     control_mappings: # TODO
     scorecard_probe:
       - blocksForcePushOnBranches
+    minder_rules:
+      - name: osps-ac-03
+        url: https://github.com/mindersec/minder-rules-and-profiles/blob/main/security-baseline/rule-types/github/osps-ac-03.yaml
 
   - id: OSPS-AC-04
     maturity_level: 1
@@ -148,6 +151,9 @@ criteria:
     control_mappings: # TODO
     scorecard_probe:
       - blocksDeleteOnBranches
+    minder_rules:
+      - name: osps-ac-04
+        url: https://github.com/mindersec/minder-rules-and-profiles/blob/main/security-baseline/rule-types/github/osps-ac-04.yaml
 
   - id: OSPS-AC-05
     maturity_level: 2
@@ -390,6 +396,9 @@ criteria:
     security_insights_value: # TODO
     scorecard_probe:
       - # None yet
+    minder_rules:
+      - name: osps-do-01
+        url: https://github.com/mindersec/minder-rules-and-profiles/blob/main/security-baseline/rule-types/github/osps-do-01.yaml
 
   - id: OSPS-DO-02
     maturity_level: 1
@@ -412,6 +421,9 @@ criteria:
     security_insights_value: # TODO
     scorecard_probe:
       - # None, may not be suitable
+    minder_rules:
+      - name: osps-do-02
+        url: https://github.com/mindersec/minder-rules-and-profiles/blob/main/security-baseline/rule-types/github/osps-do-02.yaml
 
   - id: OSPS-DO-03
     maturity_level: 2
@@ -716,6 +728,9 @@ criteria:
     security_insights_value: # TODO
     scorecard_probe:
       - hasPermissiveLicense # Check this
+    minder_rules:
+      - name: osps-le-02
+        url: https://github.com/mindersec/minder-rules-and-profiles/blob/main/security-baseline/rule-types/github/osps-le-02.yaml
 
   - id: OSPS-LE-03
     maturity_level: 1
@@ -741,6 +756,9 @@ criteria:
     security_insights_value: # TODO
     scorecard_probe:
       - hasLicenseFile
+    minder_rules:
+      - name: osps-le-03
+        url: https://github.com/mindersec/minder-rules-and-profiles/blob/main/security-baseline/rule-types/github/osps-le-03.yaml
 
   - id: OSPS-LE-04
     maturity_level: 1
@@ -796,6 +814,9 @@ criteria:
       that would impact the repository URL.
     control_mappings: # TODO
     security_insights_value: # TODO
+    minder_rules:
+      - name: osps-qa-01
+        url: https://github.com/mindersec/minder-rules-and-profiles/blob/main/security-baseline/rule-types/github/osps-qa-01.yaml
 
   - id: OSPS-QA-02
     maturity_level: 1
