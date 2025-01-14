@@ -87,6 +87,22 @@ _No security insights identified._
 _No scorecard probe identified._
 {{- end }}
 
+**Minder Rule(s):**
+{{ if .MinderRules }}
+{{- range .MinderRules }}
+- [{{ .Name }}]({{ .URL }})
+{{- if .Config }}
+
+```yaml
+{{ .Config }}
+```
+
+{{- end }}
+{{- end }}
+{{- else }}
+_No minder rule identified._
+{{- end }}
+
 ---
 
 {{- end }}
